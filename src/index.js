@@ -23,8 +23,10 @@ class Status extends React.Component{
     
     
     submit(event){
-        if(event.key=="ENTER"){
-            commentList.push(this.input.current.value);
+        if(event.keyCode==13){
+            this.setState((state)=>({
+                commentList: [...state.commentList,this.input.current.value]
+            }))
         }
     }
     
@@ -35,8 +37,9 @@ class Status extends React.Component{
                     <span>{this.state.likes} likes, {this.state.comment} comments</span>
                 </div>
                 <div class="comment">
-                    {this.state.commentList.forEach(element => {
-                        <div class="text">element</div>
+                    {this.state.commentList.map(function(element){
+                        console.log("do");
+                        return <div class="text">{element}</div>;
                     })}    
                     <input ref={this.input} type='text' class="comment" 
                     onKeyDown = {this.submit}
