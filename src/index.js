@@ -6,7 +6,7 @@ const likebtn = document.querySelector(".like");
 function getData(city){
     var url = "http://api.openweathermap.org/data/2.5/weather?q=";
     var openweatherApiKey = '7b55b40b533897f929d79c9d5869e072';
-    // var googleApiKey = "AIzaSyBkub2p7uuExPJYt0UaeUkpcZFpNzadqKI";
+    // var googleApiKey = "";
     // var ggurl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input="+city+"&inputtype=textquery&fields=photos&key="+googleApiKey;
     fetch(url+city+"&appid="+openweatherApiKey)
     .then((response)=>{
