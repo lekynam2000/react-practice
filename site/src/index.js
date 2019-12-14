@@ -4,7 +4,7 @@ import "./style.scss"
 
 const likebtn = document.querySelector(".like");
 function getData(city){
-    var url = "http://api.openweathermap.org/data/2.5/weather?q=";
+    var url = "https://api.openweathermap.org/data/2.5/weather?q=";
     var openweatherApiKey = '7b55b40b533897f929d79c9d5869e072';
  
     // var googleApiKey = "";
